@@ -1,7 +1,7 @@
 int find(int i,vector<int>&parent){
     if(i==parent[i]) return i;
 
-    return (parent[i],parent);
+    return parent[i] = find(parent[i],parent);
 }
 
 void union(int x, int y, vector<int>&parent){
