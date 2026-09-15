@@ -19,14 +19,14 @@ class Solution {
         vector<bool>vis(V,false);
         vis[0]=true;
         
-        int farthest=0;
+        int farthest1=0;
         while(!q.empty()){
             int sz= q.size();
             
             while(sz--){
                 int node= q.front();
                 
-                farthest= node;
+                farthest1 = node;
                 q.pop();
                 
                 for(auto it: adj[node]){
@@ -46,13 +46,14 @@ class Solution {
         vis=vector<bool>(V,false);
         
         vis[farthest] = true;
-        
+        int farthest2=0;
         int diameter=0;
         while(!q.empty()){
             int sz= q.size();
             
             while(sz--){
                 int node=q.front();
+                farthest2 = node;
                 q.pop();
                 
                 for(auto it: adj[node]){
