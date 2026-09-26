@@ -21,7 +21,7 @@ void buildgraph(TreeNode* root,TreeNode* parent,unordered_map<TreeNode*, vector<
 }
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
         
-        unordered_map<TreeNode*, vector<TreeNode*>> adj; // make graph beacause tree can not access the parent or not go above it only goes to left and right
+        unordered_map<TreeNode*, vector<TreeNode*>> adj; // make undirected graph beacause tree can not access the parent or not go above it only goes to left and right
         buildgraph(root,NULL,adj);
         vector<int>ans;
         unordered_set<TreeNode*>vis;
